@@ -24,7 +24,7 @@ public class Main {
             String title = sc.nextLine();
             switch (type) {
                 case 1:
-                    System.out.println("Select the brightness from 1 to infinity:");
+                    System.out.println("Select the brightness from 1 to 10:");
                     int imgBrightness = sc.nextInt();
                     multimedia[i] = new Image(title, imgBrightness);
                     break;
