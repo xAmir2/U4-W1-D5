@@ -13,7 +13,7 @@ public class Image extends Media {
     }
 
     public void increaseBrightness() {
-        brightness++;
+        if (brightness < 10) brightness++;
     }
 
     public void decreaseBrightness() {

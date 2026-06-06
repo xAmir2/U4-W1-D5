@@ -7,15 +7,16 @@ public class Video extends Media implements Play {
     private int amount;
     private int volume;
 
-    public Video(String title, int brightness, int duration, int volume) {
+    public Video(String title, int brightness, int amount, int volume) {
         super(title);
         this.brightness = brightness;
-        this.amount = duration;
+        this.amount = amount;
         this.volume = volume;
     }
 
     public void increaseVolume() {
-        this.volume++;
+        if (this.volume < 10)
+            this.volume++;
     }
 
     public void decreaseVolume() {
@@ -24,7 +25,8 @@ public class Video extends Media implements Play {
     }
 
     public void increaseBrightness() {
-        this.brightness++;
+        if (brightness < 10)
+            this.brightness++;
     }
 
     public void decreaseBrightness() {
