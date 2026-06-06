@@ -24,26 +24,67 @@ public class Main {
             String title = sc.nextLine();
             switch (type) {
                 case 1: {
-                    System.out.println("Select the brightness from 1 to 10:");
-                    int brightness = sc.nextInt();
-                    multimedia[i] = new Image(title, brightness);
+                    while (true) {
+                        System.out.println("Select the brightness from 1 to 10:");
+                        int brightness = sc.nextInt();
+                        if (brightness >= 0 && brightness <= 10) {
+                            multimedia[i] = new Image(title, brightness);
+                            break;
+                        }
+                        System.out.println("Invalid brightness");
+                    }
                     break;
                 }
                 case 2: {
-                    System.out.println("Select how many audios from 1 to 10:");
-                    int amount = sc.nextInt();
-                    System.out.println("Please enter the audioVolume from 1 to 10:");
-                    int volume = sc.nextInt();
+                    int amount;
+                    int volume;
+                    while (true) {
+                        System.out.println("Select how many audio from 1 to 10:");
+                        amount = sc.nextInt();
+                        if (amount >= 0 && amount <= 10) {
+                            break;
+                        }
+                        System.out.println("Invalid audio amount");
+                    }
+                    while (true) {
+                        System.out.println("Please enter the audioVolume from 1 to 10:");
+                        volume = sc.nextInt();
+                        if (volume >= 0 && volume <= 10) {
+                            break;
+                        }
+                        System.out.println("Invalid audio volume");
+                    }
                     multimedia[i] = new Audio(title, amount, volume);
                     break;
                 }
                 case 3: {
-                    System.out.println("Select the brightness from 1 to 10:");
-                    int brightness = sc.nextInt();
-                    System.out.println("Please enter the volume from 1 to 10:");
-                    int volume = sc.nextInt();
-                    System.out.println("Select how many videos from 1 to 10:");
-                    int amount = sc.nextInt();
+                    int brightness;
+                    int volume;
+                    int amount;
+                    while (true) {
+                        System.out.println("Select the brightness from 1 to 10:");
+                        brightness = sc.nextInt();
+                        if (brightness >= 0 && brightness <= 10) {
+                            break;
+                        }
+                        System.out.println("Invalid brightness input.");
+                    }
+                    while (true) {
+                        System.out.println("Please enter the volume from 1 to 10:");
+                        volume = sc.nextInt();
+                        if (volume >= 0 && volume <= 10) {
+                            break;
+                        }
+                        System.out.println("Invalid volume input.");
+                    }
+                    while (true) {
+                        System.out.println("Select how many videos from 1 to 10:");
+                        amount = sc.nextInt();
+                        if (amount >= 0 && amount <= 10) {
+                            break;
+                        }
+                        System.out.println("Invalid amount input.");
+                    }
                     multimedia[i] = new Video(title, brightness, amount, volume);
                     break;
                 }

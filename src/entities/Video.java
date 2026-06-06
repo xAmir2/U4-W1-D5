@@ -37,7 +37,7 @@ public class Video extends Media implements Play {
     @Override
     public void play() {
         for (int i = 0; i < amount; i++) {
-            System.out.println("Title: " + title + " - Volume:" + "(" + volume + "): " + "!".repeat(volume) + "(" + brightness + "): " + "*".repeat(brightness));
+            System.out.println("Title: " + title + " - Volume:" + "(" + volume + "): " + "!".repeat(volume) + " - Brightness: " + "(" + brightness + "): " + "*".repeat(brightness));
         }
     }
 }
