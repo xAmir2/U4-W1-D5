@@ -23,11 +23,12 @@ public class Main {
             System.out.println("Please enter a title:");
             String title = sc.nextLine();
             switch (type) {
-                case 1:
+                case 1: {
                     System.out.println("Select the brightness from 1 to 10:");
-                    int imgBrightness = sc.nextInt();
-                    multimedia[i] = new Image(title, imgBrightness);
+                    int brightness = sc.nextInt();
+                    multimedia[i] = new Image(title, brightness);
                     break;
+                }
                 case 2: {
                     System.out.println("Select how many audios from 1 to 10:");
                     int amount = sc.nextInt();

@@ -13,7 +13,8 @@ public class Audio extends Media implements Play {
     }
 
     public void increaseVolume() {
-        volume++;
+        if (this.volume < 10)
+            volume++;
     }
 
     public void decreaseVolume() {
