@@ -36,15 +36,15 @@ public class Main {
                     break;
                 }
                 case 2: {
-                    int repeat;
+                    int duration;
                     int volume;
                     while (true) {
-                        System.out.println("Select how many times to repeat from 1 to 10:");
-                        repeat = sc.nextInt();
-                        if (repeat >= 0 && repeat <= 10) {
+                        System.out.println("Select the duration of the audio from 1 to 10:");
+                        duration = sc.nextInt();
+                        if (duration >= 0 && duration <= 10) {
                             break;
                         }
-                        System.out.println("Invalid audio repeat");
+                        System.out.println("Invalid audio duration");
                     }
                     while (true) {
                         System.out.println("Please enter the audio volume from 1 to 10:");
@@ -54,13 +54,13 @@ public class Main {
                         }
                         System.out.println("Invalid audio volume");
                     }
-                    multimedia[i] = new Audio(title, repeat, volume);
+                    multimedia[i] = new Audio(title, duration, volume);
                     break;
                 }
                 case 3: {
                     int brightness;
                     int volume;
-                    int repeat;
+                    int duration;
                     while (true) {
                         System.out.println("Select the brightness from 1 to 10:");
                         brightness = sc.nextInt();
@@ -78,14 +78,14 @@ public class Main {
                         System.out.println("Invalid volume input.");
                     }
                     while (true) {
-                        System.out.println("Select how many time to repeat from 1 to 10:");
-                        repeat = sc.nextInt();
-                        if (repeat >= 0 && repeat <= 10) {
+                        System.out.println("Select the duration of the video from 1 to 10:");
+                        duration = sc.nextInt();
+                        if (duration >= 0 && duration <= 10) {
                             break;
                         }
-                        System.out.println("Invalid repeat input.");
+                        System.out.println("Invalid duration input.");
                     }
-                    multimedia[i] = new Video(title, brightness, repeat, volume);
+                    multimedia[i] = new Video(title, brightness, duration, volume);
                     break;
                 }
                 default:
