@@ -6,7 +6,7 @@ import entities.Video;
 
 public class Methods {
     public static void main() {
-        Image img = new Image("Fire", 10);
+        Image img = new Image("Fire", 9);
         Audio audio = new Audio("Voice message", 3, 8);
         Video video = new Video("Video test", 3, 3, 4);
         System.out.println("Image test: " + img);
