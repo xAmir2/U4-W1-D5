@@ -3,12 +3,12 @@ package entities;
 import interfaces.Play;
 
 public class Audio extends Media implements Play {
-    private int amount;
+    private int repeat;
     private int volume;
 
-    public Audio(String title, int duration, int volume) {
+    public Audio(String title, int repeat, int volume) {
         super(title);
-        this.amount = duration;
+        this.repeat = repeat;
         this.volume = volume;
     }
 
@@ -25,8 +25,13 @@ public class Audio extends Media implements Play {
 
     @Override
     public void play() {
-        for (int i = 0; i < amount; i++) {
+        for (int i = 0; i < repeat; i++) {
             System.out.println("Title: " + title + " - Volume:" + "(" + volume + "): " + "!".repeat(volume));
         }
+    }
+
+    @Override
+    public String toString() {
+        return title + " - Volume:" + "(" + volume + "): " + "!".repeat(volume);
     }
 }

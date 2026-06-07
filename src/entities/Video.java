@@ -4,13 +4,13 @@ import interfaces.Play;
 
 public class Video extends Media implements Play {
     private int brightness;
-    private int amount;
+    private int repeat;
     private int volume;
 
-    public Video(String title, int brightness, int amount, int volume) {
+    public Video(String title, int brightness, int repeat, int volume) {
         super(title);
         this.brightness = brightness;
-        this.amount = amount;
+        this.repeat = repeat;
         this.volume = volume;
     }
 
@@ -36,8 +36,13 @@ public class Video extends Media implements Play {
 
     @Override
     public void play() {
-        for (int i = 0; i < amount; i++) {
+        for (int i = 0; i < repeat; i++) {
             System.out.println("Title: " + title + " - Volume:" + "(" + volume + "): " + "!".repeat(volume) + " - Brightness: " + "(" + brightness + "): " + "*".repeat(brightness));
         }
+    }
+
+    @Override
+    public String toString() {
+        return title + " - Volume:" + "(" + volume + "): " + "!".repeat(volume) + " - Brightness: " + "(" + brightness + "): " + "*".repeat(brightness);
     }
 }

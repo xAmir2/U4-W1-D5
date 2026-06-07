@@ -20,4 +20,9 @@ public class Image extends Media {
         if (brightness > 0)
             brightness--;
     }
+
+    @Override
+    public String toString() {
+        return title + " - Brightness" + "(" + brightness + "): " + "*".repeat(brightness);
+    }
 }
